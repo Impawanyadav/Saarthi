@@ -1,0 +1,23 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+				<link rel="stylesheet" href="/index.css">
+			</head>
+		<body>
+			<div class="formout">
+					<div class="formin1">
+
+		<form th:action="@{regForm}" th:object="${user}" method="post">
+			
+			Name:<input type="text" th:field="*{name}" required/><br>
+			Age:<input type="text" th:field="*{age}" required/> <br>
+			Gender:<input type="radio" th:field="*{gender}" value="Male" required /> Male
+			    <input type="radio" th:field="*{gender}" value="Female" required/> Female<br>
+			Email Id:<input type="text" th:field="*{email}" required/></br>
+			Password:<input type="password" th:field="*{password}" required/><br>
+			<input type="submit" value="Register"/>
+			
+		</form>
+					</div>
+					</div>
+	</body>
+</html>

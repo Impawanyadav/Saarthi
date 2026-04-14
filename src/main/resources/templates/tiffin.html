@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Saarthi Menu</title>
+	<link rel="stylesheet" href="/index.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		integrity="sha512-pVn6X... (trimmed)" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+	<div class="header">
+
+
+
+
+
+		<div class="logo"><button class="iconButton" id="menuBtn"><i class="fa-solid fa-bars"></i></button></div>
+		<div class="logo">Saarthi</div>
+		<div class="contact">
+			<div class="c1"><button class="iconButton2" id="iconButton2"><i class="fa-regular fa-user"></i> </button>
+			</div>
+			<div class="c1 sidebar">Contact Us </div>
+			<div class="c1 sidebar">About Us </div>
+
+
+		</div>
+
+	</div>
+	
+	<div class="side-menu" id="sideMenu">
+		<button id="close"><i class="fa-solid fa-xmark"></i></button>
+		<a th:href="@{/home}">Home</a>
+		<a th:href="@{/workPage}">Working Professionals</a>
+		<a th:href="@{/roomRent}">Room Rent</a>
+		<a th:href="@{/tiffinService}">Tiffin Service</a>
+		<a th:href="@{/milkDairy}">Milk Dairy</a>
+		
+		<a th:href="@{/logOut}">Logout</a>
+		
+	</div>
+
+
+	<div class="user-side-menu" id="userSideMenu">
+		<button id="userClose"><i class="fa-solid fa-xmark"></i></button>
+		<a href="#"><span th:text="${session.usersName}"></span></a>
+		<a href="#">---</a>
+		<a href="#">---</a>
+		<a href="#">---</a>
+		<a href="#">//</a>
+	</div>
+	<div class="main">
+		
+
+
+
+
+			
+			<div class="s">
+			
+			<input type="text" id="city" placeholder="Enter City" class="ser">
+			<input type="text" id="pincode" placeholder="Enter Pincode" class="ser">
+			<button onclick="searchLunch()" class="ser">Search</button>
+            </div>
+			<div id="lunch"></div>
+			
+
+
+
+	</div>
+
+	<script src="/js/main.js"></script>
+	<script th:src="@{/js/lunch.js}"></script>
+	
+	
+</body>
+
+</html>

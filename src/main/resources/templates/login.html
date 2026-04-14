@@ -1,0 +1,23 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+			<link rel="stylesheet" href="/index.css">
+		</head>
+	<body>
+		<div class="formout">
+				<div class="formin1">
+
+
+		
+		<form th:action="@{loginForm}" th:object="${user}" method="post">
+			
+			
+			Email Id:<input type="text" th:field="*{email}" required/></br>
+			Password:<input type="password" th:field="*{password}" required/><br>
+			<input type="submit" value="Sign in"/>
+			
+		</form>
+		
+		</div>
+		</div>
+	</body>
+</html>

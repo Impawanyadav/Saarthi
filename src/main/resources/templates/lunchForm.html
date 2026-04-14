@@ -1,0 +1,41 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+				<link rel="stylesheet" href="/index.css">
+			</head>
+			<body>
+		<div>
+			<div class="formout">
+								<div class="formin1">
+
+		
+		<form th:action="@{lunchForm}" th:object="${lunch}" method="post">
+			
+			<input type="hidden" name="name" th:value="${session.usersName}" />
+
+			<input type="hidden" name="email" th:value="${session.email}" />
+			Mobile No. <input type="number" th:field="*{phone}" required/><br>
+			Aadhaar:<input type="text" th:field="*{aadhaar}" required/></br>
+			
+			
+			Menu Details:<br><textarea 
+			    th:field="*{menuPrice}" 
+			    rows="6" 
+			    style="width: 50%; padding: 8px;" 
+			    placeholder="Write Menu Here..." required>
+			</textarea><br>
+			Address: <input type="text" th:field="*{address}" required/><br>
+			City: <input type="text" th:field="*{city}" required/><br>
+			State <input type="text" th:field="*{state}" required/><br>
+			Pincode: <input type="number" th:field="*{pincode}" required/><br>
+			<input type="hidden" th:field="*{likes}"/>
+			<input type="hidden" th:field="*{status}"/>
+			<button type="submit">Submit</button>
+
+			
+			
+		</form>
+		
+			</div>
+			</div>
+	</body>
+</html>

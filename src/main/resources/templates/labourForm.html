@@ -1,0 +1,68 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<link rel="stylesheet" href="/index.css">
+	</head>
+	<body>
+		<div class="formout">
+		<div class="formin1">
+			
+		
+		<form th:action="@{labForm}" th:object="${worker}" method="post">
+			
+			
+			
+			Gender:<input type="radio" th:field="*{gender}" value="Male" required> Male
+			    <input type="radio" th:field="*{gender}" value="Female" required>Female<br>
+				
+				
+				<input type="hidden" name="name" th:value="${session.usersName}" />
+
+				<input type="hidden" name="email" th:value="${session.email}" />
+			Mobile No. <input type="number" th:field="*{phone}" required/><br>
+			Aadhaar:<input type="text" th:field="*{aadhaar}" required/></br>
+			Profession:<select th:field="*{work}" required>
+								
+				    <option value="">-- Select Profession --</option>
+
+				    <option value="AC Technician">AC Technician</option>
+				    <option value="Carpenter">Carpenter</option>
+				    <option value="Construction Worker">Construction Worker</option>
+				    <option value="Cook">Cook / Chef</option>
+				    <option value="Driver">Driver</option>
+				    <option value="Electrician">Electrician</option>
+				    <option value="Gardener">Gardener / Mali</option>
+				    <option value="Labour">Daily Wage Labour</option>
+				    <option value="Maid">House Maid</option>
+				    <option value="Mechanic">Mechanic</option>
+				    <option value="Painter">Painter</option>
+				    <option value="Plaster Worker">Plaster Worker</option>
+				    <option value="Plumber">Plumber</option>
+				    <option value="Security Guard">Security Guard</option>
+				    <option value="Sweeper">Sweeper</option>
+				    <option value="Tailor">Tailor</option>
+					<option value="Tution Teacher">Tution Teacher</option>
+				    <option value="Welder">Welder</option>
+				
+
+			</select><br>
+			
+			Work Description:<br><textarea 
+			    th:field="*{description}" 
+			    rows="6" 
+			    style="width: 50%; padding: 8px;" 
+			    placeholder="Describe the work..." required>
+			</textarea><br>
+			
+			City: <input type="text" th:field="*{city}"/><br>
+			State <input type="text" th:field="*{state}"/><br>
+			<input type="hidden" th:field="*{likes}"/>
+			<input type="hidden" th:field="*{status}"/>
+			<button type="submit">Submit</button>
+
+			
+			
+		</form>
+		</div>
+		</div>
+	</body>
+</html>

@@ -1,4 +1,4 @@
-package in.py.main.cotrollers;
+package in.py.main.controllers;
 
 import java.lang.ProcessBuilder.Redirect;
 import java.lang.classfile.instruction.NewMultiArrayInstruction;
@@ -16,7 +16,7 @@ import in.py.main.entities.Lunch;
 import in.py.main.entities.Room;
 import in.py.main.entities.User;
 import in.py.main.entities.Worker;
-import in.py.main.repostories.UserRepository;
+import in.py.main.repositories.UserRepository;
 import in.py.main.service.DairyService;
 import in.py.main.service.LunchService;
 import in.py.main.service.RoomService;

@@ -1,12 +1,13 @@
 package in.py.main.service;
 
 import java.util.List;
-import in.py.main.repostories.WorkerRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import in.py.main.entities.Room;
-import in.py.main.repostories.RoomRepository;
+import in.py.main.repositories.RoomRepository;
+import in.py.main.repositories.WorkerRepository;
 
 @Service
 public class RoomServiceImp implements RoomService {

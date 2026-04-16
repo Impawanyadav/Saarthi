@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import in.py.main.entities.User;
-import in.py.main.repostories.UserRepository;
+import in.py.main.repositories.UserRepository;
 
 @Service
 public class UserServiceImp implements UserService {

@@ -1,4 +1,4 @@
-package in.py.main.cotrollers;
+package in.py.main.controllers;
 
 import java.util.List;
 

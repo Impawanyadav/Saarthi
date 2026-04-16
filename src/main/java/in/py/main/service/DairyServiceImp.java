@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import in.py.main.entities.Dairy;
-import in.py.main.repostories.DairyRepository;
+import in.py.main.repositories.DairyRepository;
 
 @Service
 public class DairyServiceImp implements DairyService {

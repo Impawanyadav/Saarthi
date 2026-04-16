@@ -1,4 +1,4 @@
-package in.py.main.repostories;
+package in.py.main.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

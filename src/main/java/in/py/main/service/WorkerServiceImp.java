@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import in.py.main.entities.Worker;
-import in.py.main.repostories.WorkerRepository;
+import in.py.main.repositories.WorkerRepository;
 @Service
 public class WorkerServiceImp implements WorkerService {
 	

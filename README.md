@@ -49,12 +49,12 @@ It provides a platform for:
 
 ---
 ## 📸 Project Screenshots
-Screenshot (1295).png
-Screenshot (1296).png
-Screenshot (1297).png
-Screenshot (1298).png
-Screenshot (1299).png
-Screenshot (1301).png
+images/Screenshot(1295).png
+images/Screenshot(1296).png
+images/Screenshot(1297).png
+images/Screenshot(1298).png
+images/Screenshot(1299).png
+images/Screenshot(1301).png
 
 ---
 ## ⚙️ Tech Stack

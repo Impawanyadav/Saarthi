@@ -1,4 +1,4 @@
-# 🏠 Saarthi – Local Service & Room Finder Platform
+# 🏠 Saarthi 
 
 ![Java](https://img.shields.io/badge/Java-17%2B-orange)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen)

@@ -50,10 +50,10 @@ It provides a platform for:
 ---
 ## 📸 Project Screenshots
 ![Home Page](images/Screenshot%20(1295).png)
-![Job Listings](images/Screenshot(1297).png)
-![Update Listing](images/Screenshot(1298).png)
-![Room Listings](images/Screenshot(1299).png)
-![User DashBoard](images/Screenshot(1301).png)
+![Job Listings](images/Screenshot%20(1297).png)
+![Update Listing](images/Screenshot%20(1298).png)
+![Room Listings](images/Screenshot%20(1299).png)
+![User DashBoard](images/Screenshot%20(1301).png)
 
 ---
 ## ⚙️ Tech Stack

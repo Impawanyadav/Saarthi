@@ -49,12 +49,11 @@ It provides a platform for:
 
 ---
 ## 📸 Project Screenshots
-https://github.com/Impawanyadav/Saarthi/blob/main/images/Screenshot%20(1295).png
-images/Screenshot(1296).png
-images/Screenshot(1297).png
-images/Screenshot(1298).png
-images/Screenshot(1299).png
-images/Screenshot(1301).png
+![Home Page](images/Screenshot%20(1295).png)
+![Job Listings](images/Screenshot(1297).png)
+![Update Listing](images/Screenshot(1298).png)
+![Room Listings](images/Screenshot(1299).png)
+![User DashBoard](images/Screenshot(1301).png)
 
 ---
 ## ⚙️ Tech Stack

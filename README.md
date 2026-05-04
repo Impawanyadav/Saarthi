@@ -1,6 +1,6 @@
 # 🏠 Saarthi 
 
-![Java](https://img.shields.io/badge/Java-17%2B-orange)
+![Java](https://img.shields.io/badge/Java-25-orange)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen)
 ![MySQL](https://img.shields.io/badge/MySQL-Database-blue)
 ![Thymeleaf](https://img.shields.io/badge/Thymeleaf-UI-green)
@@ -52,15 +52,13 @@ It provides a platform for:
 ## ⚙️ Tech Stack
 
 - Spring Boot (MVC Architecture)  
-- Spring Data JPA (Hibernate)  
-- MySQL Database  
-- Thymeleaf (Frontend)  
+- Spring Data JPA (Hibernate ORM)  
+- MySQL (Database: project1)  
+- Thymeleaf (Server-side UI)  
 - HTML, CSS, JavaScript  
 - Session-based authentication  
-- Spring Security Crypto  
-
----
-
+- Spring Security Crypto (Password encryption)  
+- Java 25  
 ## 🗃️ Database Design
 
 Database Name:

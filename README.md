@@ -49,7 +49,7 @@ It provides a platform for:
 
 ---
 ## 📸 Project Screenshots
-images/Screenshot(1295).png
+https://github.com/Impawanyadav/Saarthi/blob/main/images/Screenshot%20(1295).png
 images/Screenshot(1296).png
 images/Screenshot(1297).png
 images/Screenshot(1298).png

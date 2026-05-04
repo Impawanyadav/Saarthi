@@ -48,7 +48,15 @@ It provides a platform for:
 - Location-based search  
 
 ---
+## 📸 Project Screenshots
+Screenshot (1295).png
+Screenshot (1296).png
+Screenshot (1297).png
+Screenshot (1298).png
+Screenshot (1299).png
+Screenshot (1301).png
 
+---
 ## ⚙️ Tech Stack
 
 - Spring Boot (MVC Architecture)  

@@ -25,9 +25,33 @@ async function searchLunch(){
 		   			   <div class="jbox1">
 		   			   <div><button><i class="fa-regular fa-thumbs-up"></i></button></div><div><p>${da.status}</p></div>
 		   			   </div>
+					   <div class="jbox1">
+					   				   					   					               <div><a href="/editLunch/${da.id}" class="edit-btn">Edit</a></div>
+																						   <div><button onclick="deleteLunch(${da.id})">Delete</button></div>
+					   				   					   </div>
 		              </div>
 	       `;
 	   });
 
 	   document.getElementById("lunch").innerHTML = output;
+}
+
+function deleteLunch(id) {
+
+    let confirmDelete = confirm("Do you want to delete this listing?");
+
+    if (confirmDelete) {
+        fetch(`/deleteLunch/${id}`, {
+            method: "DELETE"   
+        })
+        .then(response => {
+            if (response.ok) {
+                alert("Deleted successfully");
+                location.reload(); // refresh list
+            } else {
+                alert("Error deleting");
+            }
+        })
+        .catch(error => console.error(error));
+    }
 }

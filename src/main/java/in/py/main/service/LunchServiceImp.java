@@ -41,11 +41,24 @@ public class LunchServiceImp implements LunchService{
 	 }
 	 
 	 @Override
-	 public List<Lunch> getLunchById(int id)
+	 public List<Lunch> getLunchById(int userId)
 	 {
-		 return lunchRepository.findById(id);
+		 return lunchRepository.findByUserId(userId);
 		 
 	 }
+	 
+	 @Override
+	 public Lunch getUserLunch(int id)
+	 {
+		 return lunchRepository.findById(id);
+	 }
+	 
+	 @Override
+	 public void deleteListing(int id)
+	{
+		 lunchRepository.deleteById(id);
+			
+	}
 	
 
 

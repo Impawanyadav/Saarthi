@@ -47,7 +47,7 @@ public class Dairy {
 	@Column
 	private String status;
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name="user_id", nullable=false)
+	@JoinColumn(name="userId", nullable=false)
 	@JsonIgnore
 	private User user;
 	public int getId() {

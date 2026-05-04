@@ -52,7 +52,7 @@ public class Worker {
 		this.user = user;
 	}
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name="user_id", nullable=false)
+	@JoinColumn(name="userId", nullable=false)
 	@JsonIgnore
 	private User user;
 	public int getId() {

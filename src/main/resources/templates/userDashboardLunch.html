@@ -30,7 +30,7 @@
 		</div>
 
 	</div>
-	
+
 	<div class="side-menu" id="sideMenu">
 		<button id="close"><i class="fa-solid fa-xmark"></i></button>
 		<a th:href="@{/home}">Home</a>
@@ -38,34 +38,37 @@
 		<a th:href="@{/roomRent}">Room Rent</a>
 		<a th:href="@{/tiffinService}">Tiffin Service</a>
 		<a th:href="@{/milkDairy}">Milk Dairy</a>
-		
+
 		<a th:href="@{/logOut}">Logout</a>
-		
+
 	</div>
 
 
 	<div class="user-side-menu" id="userSideMenu">
 		<button id="userClose"><i class="fa-solid fa-xmark"></i></button>
 		<a href="#"><span th:text="${session.usersName}"></span></a>
-		<a href="#">---</a>
+		<a th:href="@{/userDashboard}">Your Rooms</a>
+		<a th:href="@{/userDashboardWorker}">Your Work</a>
+		<a th:href="@{/userDashboardLunch}">Your Lunch</a>
+		<a th:href="@{/userDashboardDairy}">Your Dairy</a>
 		<a href="#">---</a>
 		<a href="#">---</a>
 		<a href="#">//</a>
 	</div>
 	<div class="main">
-		
 
 
 
 
-			
-			<div class="s">
-			
-			
+
+
+		<div class="s">
+
+
 			<button onclick="searchLunch()" class="ser">Search</button>
-            </div>
-			<div id="lunch"></div>
-			
+		</div>
+		<div id="lunch"></div>
+
 
 
 
@@ -73,8 +76,8 @@
 
 	<script src="/js/main.js"></script>
 	<script th:src="@{/js/userDashboardLunch.js}"></script>
-	
-	
+
+
 </body>
 
 </html>

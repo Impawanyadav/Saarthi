@@ -49,5 +49,17 @@ public class RoomServiceImp implements RoomService {
    {
 	   return roomRepository.findByUserId(userId);
    }
+   
+   @Override
+   public Room getRoomId(int id)
+   {
+	   return roomRepository.findById(id);
+   }
+   @Override
+   public void deleteListing(int id)
+	{
+	   roomRepository.deleteById(id);
+		
+	}
 
 }

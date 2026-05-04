@@ -7,6 +7,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,6 +26,11 @@ import in.py.main.service.WorkerService;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.PathVariable;
+
 
 @Controller
 public class MyController {
@@ -311,6 +317,152 @@ public class MyController {
 	{
 		return "lab2";
 	}
+	
+	@GetMapping("/editRoom/{id}")
+	
+	public String getRoomById(@PathVariable int id, HttpSession session, Model model) {
+
+	    Integer userId = (Integer) session.getAttribute("userid");
+	    if (userId == null) return null;
+
+	    
+	    Room room = roomService.getRoomId(id);
+	    model.addAttribute("room", room);
+	    return "editRoom";
+	    
+	}
+	
+	
+	@PostMapping("/updateRoom")
+	public String updateRoom(@ModelAttribute("room") Room room, HttpSession session) {
+
+	    Integer userId = (Integer) session.getAttribute("userid");
+	    if (userId == null) return "redirect:/loginPage";
+
+	    User user = userRepository.findById(userId).orElse(null);
+
+	    
+	    room.setUser(user);
+
+	    
+	    roomService.registerRoom(room);
+
+	    return "redirect:/userDashboard";
+	}
+	
+	
+@GetMapping("/editDairy/{id}")
+	
+	public String getDairyById(@PathVariable int id, HttpSession session, Model model) {
+
+	    Integer userId = (Integer) session.getAttribute("userid");
+	    if (userId == null) return null;
+
+	    
+	    Dairy dairy = dairyService.getUserDairy(id);
+	    model.addAttribute("dairy", dairy);
+	    return "editDairy";
+	    
+	}
+@PostMapping("/updateDairy")
+public String updateDairy(@ModelAttribute("dairy") Dairy dairy, HttpSession session) {
+
+    Integer userId = (Integer) session.getAttribute("userid");
+    if (userId == null) return "redirect:/loginPage";
+
+    User user = userRepository.findById(userId).orElse(null);
+
+   
+    dairy.setUser(user);
+
+   
+    dairyService.registerDairy(dairy);
+
+    return "redirect:/userDashboardDairy";
+}
+@GetMapping("/editLunch/{id}")
+public String getLunchById(@PathVariable int id, HttpSession session, Model model) {
+
+    Integer userId = (Integer) session.getAttribute("userid");
+    if (userId == null) return null;
+
+    
+    Lunch lunch = lunchService.getUserLunch(id);
+    model.addAttribute("lunch", lunch);
+    return "editTiffin";
+    
+}
+
+@PostMapping("/updateTiffin")
+public String updateTiffin(@ModelAttribute("lunch") Lunch lunch , HttpSession session) {
+
+    Integer userId = (Integer) session.getAttribute("userid");
+    if (userId == null) return "redirect:/loginPage";
+
+    User user = userRepository.findById(userId).orElse(null);
+
+   
+    lunch.setUser(user);
+
+   
+    lunchService.registerLunch(lunch);
+
+    return "redirect:/userDashboardLunch";
+}
+
+@GetMapping("/editWorker/{id}")
+public String getWorkerById(@PathVariable int id, HttpSession session, Model model) {
+
+    Integer userId = (Integer) session.getAttribute("userid");
+    if (userId == null) return null;
+
+    
+    Worker worker = workerService.getUserWorker(id);
+    model.addAttribute("worker", worker);
+    return "editWorker";
+    
+}
+
+@PostMapping("/updateWorker")
+public String updateWorker(@ModelAttribute("worker") Worker worker, HttpSession session) {
+
+    Integer userId = (Integer) session.getAttribute("userid");
+    if (userId == null) return "redirect:/loginPage";
+
+    User user = userRepository.findById(userId).orElse(null);
+
+   
+    worker.setUser(user);
+
+   
+    workerService.registerWorker(worker);
+
+    return "redirect:/userDashboardWorker";
+}
+	
+@DeleteMapping("/deleteRoom/{id}")
+@ResponseBody
+public void deleteRoom(@PathVariable int id) {
+    roomService.deleteListing(id);
+}
+
+@DeleteMapping("/deleteDairy/{id}")
+@ResponseBody
+public void deleteDairy(@PathVariable int id) {
+    dairyService.deleteListing(id);
+}	
+	
+@DeleteMapping("/deleteLunch/{id}")
+@ResponseBody
+public void deleteLunch(@PathVariable int id) {
+    lunchService.deleteListing(id);
+}
+
+@DeleteMapping("/deleteWorker/{id}")
+@ResponseBody
+public void deleteWorker(@PathVariable int id) {
+    workerService.deleteListing(id);
+}	
 
 
 }

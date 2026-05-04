@@ -30,17 +30,17 @@
 		</div>
 
 	</div>
-	
+
 	<div class="side-menu" id="sideMenu">
 		<button id="close"><i class="fa-solid fa-xmark"></i></button>
 		<a th:href="@{/home}">Home</a>
-				<a th:href="@{/workPage}">Working Professionals</a>
-				<a th:href="@{/roomRent}">Room Rent</a>
-				<a th:href="@{/tiffinService}">Tiffin Service</a>
-				<a th:href="@{/milkDairy}">Milk Dairy</a>
-				
-				<a th:href="@{/logOut}">Logout</a>
-				
+		<a th:href="@{/workPage}">Working Professionals</a>
+		<a th:href="@{/roomRent}">Room Rent</a>
+		<a th:href="@{/tiffinService}">Tiffin Service</a>
+		<a th:href="@{/milkDairy}">Milk Dairy</a>
+
+		<a th:href="@{/logOut}">Logout</a>
+
 	</div>
 
 
@@ -48,38 +48,41 @@
 		<button id="userClose"><i class="fa-solid fa-xmark"></i></button>
 		<a href="#"><span th:text="${session.usersName}"></span></a>
 		<a th:href="@{/userDashboard}">Your Rooms</a>
+		<a th:href="@{/userDashboardWorker}">Your Work</a>
+		<a th:href="@{/userDashboardLunch}">Your Lunch</a>
+		<a th:href="@{/userDashboardDairy}">Your Dairy</a>
 		<a href="#">---</a>
 		<a href="#">---</a>
 		<a href="#">//</a>
 	</div>
 	<div class="main">
-		
 
 
 
 
-			<div class="s">
-			
-			
-			
+
+		<div class="s">
+
+
+
 			<button onclick="searchRooms()" class="ser">Search</button>
-			
-			</div>
-			
-			<div id="rooms"></div>
 
-			
+		</div>
+
+		<div id="rooms"></div>
 
 
-		
+
+
+
 
 	</div>
-	
+
 	<script th:src="@{/js/userDashboard.js}"></script>
 
 	<script src="/js/main.js"></script>
-	
-	
+
+
 </body>
 
 </html>

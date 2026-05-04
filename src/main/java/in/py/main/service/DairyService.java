@@ -8,6 +8,8 @@ public interface DairyService {
 	public boolean registerDairy(Dairy dairy);
 	public List<Dairy> getDairy(String city, String pincode);
 	public List<Dairy> getAllDairy();
-	public List<Dairy> getDairyById(int id);
+	public List<Dairy> getDairyById(int userId);
+	public Dairy getUserDairy(int id);
+	public void deleteListing(int id);
 
 }

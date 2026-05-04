@@ -30,17 +30,17 @@
 		</div>
 
 	</div>
-	
+
 	<div class="side-menu" id="sideMenu">
 		<button id="close"><i class="fa-solid fa-xmark"></i></button>
 		<a th:href="@{/home}">Home</a>
-				<a th:href="@{/workPage}">Working Professionals</a>
-				<a th:href="@{/roomRent}">Room Rent</a>
-				<a th:href="@{/tiffinService}">Tiffin Service</a>
-				<a th:href="@{/milkDairy}">Milk Dairy</a>
-				
-				<a th:href="@{/logOut}">Logout</a>
-				
+		<a th:href="@{/workPage}">Working Professionals</a>
+		<a th:href="@{/roomRent}">Room Rent</a>
+		<a th:href="@{/tiffinService}">Tiffin Service</a>
+		<a th:href="@{/milkDairy}">Milk Dairy</a>
+
+		<a th:href="@{/logOut}">Logout</a>
+
 	</div>
 
 
@@ -56,56 +56,56 @@
 		<a href="#">//</a>
 	</div>
 	<div class="main">
-		
 
 
 
 
-			<div class="s">
-			
+
+		<div class="s">
+
 			<input type="text" id="city" placeholder="Enter City" class="ser">
 			<select id="roomType" class="ser">
 				<option value="">-- Select Room type --</option>
 
-								<option value="Single Room">Single Room</option>
-								   <option value="Double Sharing">Double Sharing Room</option>
-								   <option value="Triple Sharing">Triple Sharing Room</option>
-								   <option value="PG">PG (Paying Guest)</option>
-								   <option value="Hostel Room">Hostel Room</option>
-								   <option value="1RK">1 RK (Room + Kitchen)</option>
-								   <option value="1BHK">1 BHK</option>
-								   <option value="2BHK">2 BHK</option>
-								   <option value="3BHK">3 BHK</option>
-								   <option value="4BHK">4 BHK</option>
-								   <option value="Flat">Flat / Apartment</option>
-								   <option value="Studio">Studio Apartment</option>
-								   <option value="Independent Room">Independent Room</option>
-								   <option value="Independent House">Independent House</option>
-								   <option value="Dormitory">Dormitory</option>
-								   <option value="Shared Apartment">Shared Apartment</option>
-								   <option value="Family Room">Family Room</option>
-							
+				<option value="Single Room">Single Room</option>
+				<option value="Double Sharing">Double Sharing Room</option>
+				<option value="Triple Sharing">Triple Sharing Room</option>
+				<option value="PG">PG (Paying Guest)</option>
+				<option value="Hostel Room">Hostel Room</option>
+				<option value="1RK">1 RK (Room + Kitchen)</option>
+				<option value="1BHK">1 BHK</option>
+				<option value="2BHK">2 BHK</option>
+				<option value="3BHK">3 BHK</option>
+				<option value="4BHK">4 BHK</option>
+				<option value="Flat">Flat / Apartment</option>
+				<option value="Studio">Studio Apartment</option>
+				<option value="Independent Room">Independent Room</option>
+				<option value="Independent House">Independent House</option>
+				<option value="Dormitory">Dormitory</option>
+				<option value="Shared Apartment">Shared Apartment</option>
+				<option value="Family Room">Family Room</option>
 
-						</select>
-						<input type="text" id="pincode" placeholder="Pincode" class="ser">
+
+			</select>
+			<input type="text" id="pincode" placeholder="Pincode" class="ser">
 			<button onclick="searchRooms()" class="ser">Search</button>
-			
-			</div>
-			
-			<div id="rooms"></div>
 
-			
+		</div>
+
+		<div id="rooms"></div>
 
 
-		
+
+
+
 
 	</div>
-	
+
 	<script th:src="@{/js/room.js}"></script>
 
 	<script src="/js/main.js"></script>
-	
-	
+
+
 </body>
 
 </html>

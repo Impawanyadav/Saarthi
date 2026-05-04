@@ -1,20 +1,20 @@
-async function searchLunch(){
-	
-	let city=document.getElementById("city").value;
-	let pincode=document.getElementById("pincode").value;
-	
-	let url="/api/lunch/search?";
-	
-	if (city) url+=`city=${city}&`;
-	if (pincode) url+=`pincode=${pincode}&`;
-	
-	const response=await fetch(url);
-	const lunch= await response.json();
-	
+async function searchLunch() {
+
+	let city = document.getElementById("city").value;
+	let pincode = document.getElementById("pincode").value;
+
+	let url = "/api/lunch/search?";
+
+	if (city) url += `city=${city}&`;
+	if (pincode) url += `pincode=${pincode}&`;
+
+	const response = await fetch(url);
+	const lunch = await response.json();
+
 	let output = "";
 
-	   lunch.forEach(da => {
-	       output += `
+	lunch.forEach(da => {
+		output += `
 		   <div class="jbox">
 		                  <div class="jbox11">
 		                  <div><p>${da.name} </p></div><div><p> Contact No.${da.phone}</p></div> <div><p>${da.city}</p></div> <div><p>Pincode: ${da.pincode}</p></div>
@@ -30,7 +30,7 @@ async function searchLunch(){
 		   			   </div>
 		              </div>
 	       `;
-	   });
+	});
 
-	   document.getElementById("lunch").innerHTML = output;
+	document.getElementById("lunch").innerHTML = output;
 }

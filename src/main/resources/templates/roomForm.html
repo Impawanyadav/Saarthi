@@ -1,71 +1,71 @@
 <html xmlns:th="http://www.thymeleaf.org">
-	<head>
-		<link rel="stylesheet" href="/index.css">
-	</head>
-	<body>
-		<div class="formout">
+
+<head>
+	<link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+	<div class="formout">
 		<div class="formin1">
-			
-		
-		<form th:action="@{roomForm}" th:object="${room}" method="post">
-			
-			
-			
-			
-				
-				
+
+
+			<form th:action="@{roomForm}" th:object="${room}" method="post">
+
+
+
+
+
+
 				<input type="hidden" name="name" th:value="${session.usersName}" />
-				
+
 
 				<input type="hidden" name="email" th:value="${session.email}" />
-			Mobile No. <input type="number" th:field="*{phone}" required/><br>
-			Aadhaar:<input type="text" th:field="*{aadhaar}" required/></br>
-			Room Type:<select th:field="*{roomType}" required>
-								
-				    <option value="">-- Select Room type --</option>
+				Mobile No. <input type="number" th:field="*{phone}" required /><br>
+				Aadhaar:<input type="text" th:field="*{aadhaar}" required /></br>
+				Room Type:<select th:field="*{roomType}" required>
+
+					<option value="">-- Select Room type --</option>
 
 					<option value="Single Room">Single Room</option>
-					   <option value="Double Sharing">Double Sharing Room</option>
-					   <option value="Triple Sharing">Triple Sharing Room</option>
-					   <option value="PG">PG (Paying Guest)</option>
-					   <option value="Hostel Room">Hostel Room</option>
-					   <option value="1RK">1 RK (Room + Kitchen)</option>
-					   <option value="1BHK">1 BHK</option>
-					   <option value="2BHK">2 BHK</option>
-					   <option value="3BHK">3 BHK</option>
-					   <option value="4BHK">4 BHK</option>
-					   <option value="Flat">Flat / Apartment</option>
-					   <option value="Studio">Studio Apartment</option>
-					   <option value="Independent Room">Independent Room</option>
-					   <option value="Independent House">Independent House</option>
-					   <option value="Dormitory">Dormitory</option>
-					   <option value="Shared Apartment">Shared Apartment</option>
-					   <option value="Family Room">Family Room</option>
-				
+					<option value="Double Sharing">Double Sharing Room</option>
+					<option value="Triple Sharing">Triple Sharing Room</option>
+					<option value="PG">PG (Paying Guest)</option>
+					<option value="Hostel Room">Hostel Room</option>
+					<option value="1RK">1 RK (Room + Kitchen)</option>
+					<option value="1BHK">1 BHK</option>
+					<option value="2BHK">2 BHK</option>
+					<option value="3BHK">3 BHK</option>
+					<option value="4BHK">4 BHK</option>
+					<option value="Flat">Flat / Apartment</option>
+					<option value="Studio">Studio Apartment</option>
+					<option value="Independent Room">Independent Room</option>
+					<option value="Independent House">Independent House</option>
+					<option value="Dormitory">Dormitory</option>
+					<option value="Shared Apartment">Shared Apartment</option>
+					<option value="Family Room">Family Room</option>
 
-			</select><br>
-			
-			Room Description:<br><textarea 
-			    th:field="*{roomDetails}" 
-			    rows="6" 
-			    style="width: 50%; padding: 8px;" 
-			    placeholder="Describe room..." required>
+
+				</select><br>
+
+				Room Description:<br><textarea th:field="*{roomDetails}" rows="6" style="width: 50%; padding: 8px;"
+					placeholder="Describe room..." required>
 			</textarea><br>
-			
-			Price: <input type="number" th:field="*{price}" required/><br>
-			Address: <input type="text" th:field="*{address}" required/><br>
-			
-			City: <input type="text" th:field="*{city}" required/><br>
-			State <input type="text" th:field="*{state}" required/><br>
-			Pincode: <input type="number" th:field="*{pincode}" required/><br>
-			<input type="hidden" th:field="*{likes}"/>
-			<input type="hidden" th:field="*{status}"/>
-			<button type="submit">Submit</button>
 
-			
-			
-		</form>
+				Price: <input type="number" th:field="*{price}" required /><br>
+				Address: <input type="text" th:field="*{address}" required /><br>
+
+				City: <input type="text" th:field="*{city}" required /><br>
+				State <input type="text" th:field="*{state}" required /><br>
+				Pincode: <input type="number" th:field="*{pincode}" required /><br>
+				<input type="hidden" th:field="*{likes}" />
+				<input type="hidden" th:field="*{status}" />
+				<button type="submit">Submit</button>
+
+
+
+			</form>
 		</div>
-		</div>
-	</body>
+	</div>
+</body>
+
 </html>

@@ -9,6 +9,8 @@ import in.py.main.entities.Worker;
 
 public interface WorkerRepository extends JpaRepository<Worker, Integer> {
 	List<Worker> findByCityContainingIgnoreCaseAndWorkContainingIgnoreCase(String city, String work);
-    List<Worker> findById(int id);
+    List<Worker> findByUserId(int userId);
+    public Worker findById(int id);
+    void deleteById(int id);
 
 }

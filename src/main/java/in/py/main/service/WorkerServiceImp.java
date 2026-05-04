@@ -42,9 +42,22 @@ public class WorkerServiceImp implements WorkerService {
 	}
 	
 	@Override
-	public List<Worker> getWorkerById(int id)
+	public List<Worker> getWorkerById(int userId)
+	{
+		return workerRepository.findByUserId(userId);
+	}
+	
+	@Override
+	public Worker getUserWorker(int id)
 	{
 		return workerRepository.findById(id);
+	}
+	
+	@Override
+	public void deleteListing(int id)
+	{
+		workerRepository.deleteById(id);
+		
 	}
 
 }

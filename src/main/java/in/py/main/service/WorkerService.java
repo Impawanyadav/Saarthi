@@ -8,6 +8,8 @@ public interface WorkerService {
 	public boolean registerWorker(Worker worker);
 	public List<Worker>searchWorkers(String city, String work);
 	public List<Worker>getAllJobs();
-	public List<Worker>getWorkerById(int id);
+	public List<Worker>getWorkerById(int userId);
+	public Worker getUserWorker(int id);
+	public void deleteListing(int id);
 
 }

@@ -39,9 +39,22 @@ public class DairyServiceImp implements DairyService {
 	}
 	
 	@Override
-	public List<Dairy> getDairyById(int id)
+	public List<Dairy> getDairyById(int userId)
+	{
+		return dairyRepository.findByUserId(userId);
+	}
+	
+	@Override
+	public Dairy getUserDairy(int id)
 	{
 		return dairyRepository.findById(id);
+	}
+	
+	@Override
+	public void deleteListing(int id)
+	{
+		dairyRepository.deleteById(id);
+		
 	}
 
 }

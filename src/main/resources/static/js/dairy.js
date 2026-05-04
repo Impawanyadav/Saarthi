@@ -1,20 +1,20 @@
-async function searchDairy(){
-	
-	let city=document.getElementById("city").value;
-	let pincode=document.getElementById("pincode").value;
-	
-	let url="/api/dairy/search?";
-	
-	if (city) url+=`city=${city}&`;
-	if (pincode) url+=`pincode=${pincode}&`;
-	
-	const response=await fetch(url);
-	const dairy= await response.json();
-	
+async function searchDairy() {
+
+	let city = document.getElementById("city").value;
+	let pincode = document.getElementById("pincode").value;
+
+	let url = "/api/dairy/search?";
+
+	if (city) url += `city=${city}&`;
+	if (pincode) url += `pincode=${pincode}&`;
+
+	const response = await fetch(url);
+	const dairy = await response.json();
+
 	let output = "";
 
-	   dairy.forEach(da => {
-	       output += `
+	dairy.forEach(da => {
+		output += `
 	           <div class="jbox">
 	               <div class="jbox11">
 	               <div><p>${da.name} </p></div><div><p> Contact No.${da.phone}</p></div> <div><p>${da.city}</p></div> <div><p>Pincode: ${da.pincode}</p></div>
@@ -30,7 +30,7 @@ async function searchDairy(){
 				   </div>
 	           </div>
 	       `;
-	   });
+	});
 
-	   document.getElementById("dairy").innerHTML = output;
+	document.getElementById("dairy").innerHTML = output;
 }
